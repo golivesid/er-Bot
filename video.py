@@ -10,7 +10,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 aria2 = aria2p.API(
     aria2p.Client(
         host="http://localhost",
-        port=6800,
+        port=6000,
         secret=""
     )
 )
@@ -24,7 +24,7 @@ aria2.set_global_options(options)
 
 
 async def download_video(url, reply_msg, user_mention, user_id):
-    response = requests.get(f"https://terabox-test-api.wd-zone.workers.dev/?url={url}")
+    response = requests.get(f"https://terabox.udayscriptsx.workers.dev/data?url={url}")
     response.raise_for_status()
     data = response.json()
 
